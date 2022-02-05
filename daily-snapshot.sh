@@ -14,9 +14,6 @@ mountPoints=(/mnt/hdd/ /mnt/oldhdd/)
 # I'm using year-month-day format. Example: 2022-1-20
 currentDate=$(date +%y-%m-%d)
 
-dataSubVolId="256"
-
-
 function unmountAll()
 {
 	for mnt in "${mountPoints[@]}";
