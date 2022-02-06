@@ -12,7 +12,7 @@
 mountPoints=(/mnt/hdd/ /mnt/oldhdd/)
 
 # I'm using year-month-day format. Example: 2022-1-20
-currentDate=$(date +%y-%m-%d)
+currentDate=$(date +%Y-%m-%d)
 
 function unmountAll()
 {
