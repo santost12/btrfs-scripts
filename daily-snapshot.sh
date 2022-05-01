@@ -47,11 +47,7 @@ function regularMount()
 
 
 unmountAll
-
 mountRootOfDrives
-
 snapshot
-
 unmountAll
-
 regularMount
