@@ -5,14 +5,15 @@
 # 1) Assumes your /etc/fstab is setup!
 # 2) Assumes you keep your data in /data/ subvolume.
 # 3) Assumes you keep your snapshots in /snapshots/ subvolume.
-# 4) You run it once a day at most.
 ###
 
 # mount points for each of the drives
 mountPoints=(/mnt/hdd/ /mnt/oldhdd/)
 
-# I'm using year-month-day format. Example: 2022-1-20
-currentDate=$(date +%Y-%m-%d)
+# I'm using year-month-day format with seconds since 1970-01-01 00:00:00 UTC
+# Example: 2022-09-02-1662177443
+# This allows the script to run multiple times within the same day.
+currentDate=$(date +%Y-%m-%d-%s)
 
 function unmountAll()
 {
